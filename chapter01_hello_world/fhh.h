@@ -1,0 +1,1 @@
+void func(); // 声明declare
