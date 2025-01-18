@@ -7,4 +7,4 @@ project(main)
 #这里的.代表当前目录，也即当前workspace(工作区、工作空间)，本例中cc1文件夹位置。
 aux_source_directory(chapter02_helloworld SRC_LIST)
 #生成应用程序main，在windows下会自动生成main.exe。
-add_executable(main ${SRC_LIST})
+add_executable(main chapter02_helloworld/printfTest.c)
