@@ -8,8 +8,20 @@
         "-fdiagnostics-color=always",
         "-g",//生成和调试有关的信息，launch.json会用到这些信息。
  
-        "${workspaceFolder}\\chapter01_hello_world\\ff1.c",
-        "${workspaceFolder}\\chapter01_hello_world\\pp1.c",
+        // "${workspaceFolder}\\chapter01_hello_world\\ff1.c",
+        // "${workspaceFolder}\\chapter01_hello_world\\pp1.c",
+        // "${workspaceFolder}\\chapter01_hello_world\\test.c",
+        "${workspaceFolder}\\chapter01_hello_world\\hh.c",
+
+        "-I",//-I（大写i）声明为头文件路径。
+        //下面是第三方库的头文件位置，不指出完整路径,但代码中#include后面需要补全位置。
+        "C:\\Program Files\\OpenSSL-Win64\\include",
+        "-L",// -L 声明为库文件路径。
+        //使用的第三方库位置,需要指出完整位置。
+        "C:\\Program Files\\OpenSSL-Win64\\lib\\VC\\x64\\MD",
+        //-l（小写L)声明为库文件。
+        "-l",
+        "libcrypto",//要调用的库文件。
         
         "-o",//指定编译的输出，windows系统下输出.exe文件,见下行。
         //下面是windows系统下输出.exe文件及其路径,应该与launch.json的"program"的值代表的路径一致。
