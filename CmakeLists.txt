@@ -5,6 +5,6 @@ cmake_minimum_required(VERSION 3.31.4)
 project(main) 
 #把当前目录.下所有源文件加入变量SRC_LIST，
 #这里的.代表当前目录，也即当前workspace(工作区、工作空间)，本例中cc1文件夹位置。
-aux_source_directory(chapter01_hello_world SRC_LIST)
+aux_source_directory(chapter02_helloworld SRC_LIST)
 #生成应用程序main，在windows下会自动生成main.exe。
 add_executable(main ${SRC_LIST})
